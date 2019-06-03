@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="LoginJava.js"></script>
+    <script type="text/javascript" src="LogIn.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="headerLeft">
+        <table>
+            <tr>
+                <td><img src="Logo.png "></td>
+            </tr>
+        </table>
+    </div>
+
+    <table class="rightButtons">
+        <tr>
+            <td><a href="LogIn.html" style="text-decoration: none"><input type="button" value="Log In" class="buttonRight button1 logIn"></a></td>
+            <td><a href="Register.html" style="text-decoration: none"><input type="button" value="Sign Up" class="buttonRight button1 signUp"></a></td>
+        </tr>
+    </table>
+
+    <div class="headLine">
+        E-Learning Academy
+    </div>
+
+    <nav>
+        <a href="Homepage.html" class="a">Home</a>
+        <a href="Features.html" class="a">Features</a>
+        <a href="Pricing.html" class="a">Pricing</a>
+        <a href="AboutUs.html" class="a">About Us</a>
+    </nav>
+</div>
+
+<form name="RegForm" onsubmit="return formValidate()" action="RegisterDB.php" method="post" style="margin-left: 31%; margin-top: 5%">
+    <h4>Create new Account</h4>
+    <table cellpadding="4" cellspacing="4">
+
+        <tr>
+            <td>First Name </td>
+            <td><input type="text" name="fname" placeholder="   Andrew" required onblur="alphabeticFname()"><span id="efname" style="color: red"></span></td>
+        </tr>
+
+
+        <tr>
+            <td>Last name</td>
+            <td><input type="text" name="lname" placeholder="   Fernando" required onblur="alphabeticLname()"><span id="elname" style="color: red"></span></td>
+        </tr>
+
+        <tr>
+            <td>Date of Birth</td>
+            <td><input type="date" name="dob" required style="width: 168px"></td>
+        </tr>
+
+        <tr>
+            <td>Gender</td>
+            <td><input type="radio" value="Male" name="gender" required>Male
+                <input type="radio" value="Female" name="gender" required>Female
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>Username</td>
+            <td><input type="text" name="uname" placeholder="   AndyFernando123" required onblur="alphaNumericUser()"><span id="euname" style="color: red"></span></td>
+        </tr>
+
+        <tr>
+            <td>E-mail Address</td>
+            <td><input type="email" name="email" placeholder="  andy@gmail.com" required></td>
+        </tr>
+
+        <tr>
+            <td>Password</td>
+            <td><input type="password" name="password" required onblur="checkPassword()"><span id="password" style="color: red"></span></td>
+        </tr>
+
+        <tr>
+            <td>Confirm Password</td>
+            <td><input type="password" name="cpassword" required onblur="checkcPassword()"><span id="cpassword" style="color: red"></span></td>
+        </tr>
+
+        <tr>
+            <td><input type="submit" value="Create Account" class="buttonRight button2"></td>
+            <td><input type="reset" value="Reset" class="buttonRight button2"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
